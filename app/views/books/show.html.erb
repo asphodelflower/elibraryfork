@@ -1,0 +1,56 @@
+<% title @book.title %>
+
+<% unless @book.freebase_uid.empty? %>
+  <% content_for(:head) do %>
+    <%= render :partial => 'misc/freebase_ajax' %>
+    <%= javascript_include_tag 'http://api.qrtag.net/js' %>
+  <% end %>
+<% end %>
+
+<h1>
+  <%= h(@book.title) %>
+  <%= edit_book_links(@book) %>
+  <span class="subtitle">by <%= link_to h(@book.author.name), @book.author %></span>
+</h1>
+<p>
+  <%= image_tag(h(@book.thumbnail_url), :class =>  'thumbnail') unless @book.thumbnail_url.blank? %>
+  <% unless @book.freebase_uid.empty? %>
+    <%= ajax_span 'freebase_description' %>
+  <% else %>
+    <%= @book.description %>
+    <%= "<p><b>Date of first publication:</b> #{@book.date_of_first_publication}</p>" unless @book.date_of_first_publication.empty? %>
+    <%= "<p><b>Original language:</b> #{@book.original_language}</p>" unless @book.original_language.empty? %>
+    <%= "<p><b>Number of pages:</b> #{@book.number_of_pages}</p>" if @book.number_of_pages %>
+  <% end %>
+</p>
+<% unless @book.freebase_uid.empty? %>
+  <%= ajax_div 'freebase_details' %>
+<% else %>
+  
+<% end %>
+<%= book_aka(@book) %>
+<%= book_tag_list('Genres', @book.genre_list) {|tag| genre_url(tag)} %>
+<%= book_tag_list('Subjects', @book.subject_list) {|tag| subject_url(tag)} %>
+<div></div>
+
+<h1>Download editions</h1>
+<%= translations_list(@book.translations) %>
+<%= new_translation_link(@book) %>
+
+<%= ajax_div 'freebase_universe' unless @book.freebase_uid.empty? %>
+<%= ajax_div 'freebase_quotes' unless @book.freebase_uid.empty? %>
+<%= render :partial => 'misc/qr_code' %>
+<%= ajax_div 'freebase_links' unless @book.freebase_uid.empty? %>
+
+<h1>Comments</h1>
+<%= render :partial => 'misc/disqus_thread' %>
+<% content_for(:tail) do %>
+  <%= render :partial => 'misc/disqus_tail' %>
+<% end %>
+
+<%= new_book_link(@book.author_id) %>
+<%= new_author_link %>
+
+<p>
+  <%= link_to "Back to #{h(@book.author.name)}", @book.author %>
+</p>

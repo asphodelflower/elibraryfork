@@ -1,0 +1,11 @@
+<% if @books and not @books.empty? %>
+  <% for book in @books %>
+    <% @book = book %>
+    <% @title = book.title %>
+    <%= render :partial => 'books/item' %>
+  <% end %>
+<% else %>
+  <p>
+    <i><%= @no_books_message %></i>
+  </p>
+<% end %>

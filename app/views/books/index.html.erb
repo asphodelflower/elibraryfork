@@ -1,0 +1,5 @@
+<% title 'Books' %>
+<%= letters_index(APP_CONFIG['hide_book_index'], 'The books', @letter_name) %>
+<%= render :partial => 'aliases_index' %>
+<%= will_paginate @book_aliases %>
+

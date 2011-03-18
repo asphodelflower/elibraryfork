@@ -1,0 +1,14 @@
+<% form_tag search_form_url, :method => 'get', :class => 'search' do %>
+  <table>
+    <tr>
+      <td>
+        <%= text_field_tag :query, nil, :class => 'search', :size => '60', :value => h(query),
+                           :onblur => 'javascript: search_blur(this);', :onfocus => 'javascript: search_focus(this);'
+        %>
+      </td>
+      <td>
+        <button type="submit" class="search"></button>
+      </td>
+    </tr>
+  </table>
+<% end %>

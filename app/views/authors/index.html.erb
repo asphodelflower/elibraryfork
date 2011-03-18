@@ -1,0 +1,5 @@
+<% title 'The authors' %>
+<%= letters_index(APP_CONFIG['hide_author_index'], 'Authors', @letter_name) %>
+<%= render :partial => 'aliases_index' %>
+<%= will_paginate @author_aliases %>
+<%= new_author_link %>

@@ -1,0 +1,11 @@
+<% if @book_aliases and not @book_aliases.empty? %>
+  <% for aliaz in @book_aliases %>
+    <% @book = aliaz.book %>
+    <% @title = aliaz.title %>
+    <%= render :partial => 'books/item' %>
+  <% end %>
+<% else %>
+  <p>
+    <i><%= @no_book_aliases_message %></i>
+  </p>
+<% end %>

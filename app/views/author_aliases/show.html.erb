@@ -1,0 +1,14 @@
+<% title @alias.name %>
+
+<h1><%= h(@alias.name) %></h1>
+<p>
+  <strong>Alias:</strong> <%= h @alias.name %>
+</p>
+
+<p>
+  <strong>Author:</strong> <%= link_to h(@alias.author.name), @alias.author %>
+</p>
+
+<p>
+  <%= link_to "Back to aliases for #{h(@alias.author.name)}", aliases_url("?author=#{@alias.author.id}") %>
+</p>

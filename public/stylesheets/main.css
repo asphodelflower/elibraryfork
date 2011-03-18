@@ -1,0 +1,562 @@
+html, body {
+  height:100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: center;
+  color: #444444;
+  background-color: #E9E9E8;
+  font-family: "Times New Roman", Times, serif;
+  /*font-family: Arial, sans-serif;*/
+  /*font-size: 1em;*/
+  font-size: 12pt;
+}
+
+img.logo {
+  border: none;
+  margin-left: 15px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0;
+}
+
+div {
+  /* This way one could force carriage return after floating objects just by using divs */
+  clear: both;
+}
+
+div.download {
+  border: #aaa solid 1px;
+  padding: 0px;
+  background-color: #f0f0eb;
+}
+
+h1.letter {
+  line-height: 1.5em;
+}
+
+ul {
+  list-style-type:circle;
+}
+
+span.letter {
+  /*font-size: 1.2em;*/
+  background-color: #06A;
+  color: #E9E9E8;
+  padding: 0 0.4em;
+  float: right;
+}
+
+a.letter {
+  font-size: 0.5em;
+}
+
+span.subtitle {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  /*font-family: Arial, sans-serif;*/
+  font-size: 0.6em;
+  font-variant: normal;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+}
+
+p {
+  padding: 0 15px 0 15px;
+  text-align: left;
+  line-height: 140%;
+}
+
+i, em {
+  color: #806A5D;
+  /*color: #000;*/
+}
+
+h1, h2, h3 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #aaa;
+  text-align: left;
+  font-weight: normal;
+  font-variant: small-caps;
+  padding: 0 15px 8px 15px;
+  color: #000;
+}
+
+h2, h3 {
+  font-size: 1.0em;
+  /*border-bottom: 1px solid #ccc;*/
+  text-align: left;
+}
+
+h3 {
+  font-variant: normal;
+  border: none;
+  padding-bottom: 0px;
+  font-weight: bold;
+  color: #444;
+}
+
+h1 i, h1 em {
+  font-size: 0.85em;
+  font-variant: normal;
+  font-weight: normal;
+  color: #444;
+}
+
+table.inline td {
+  padding: 4px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+table#versions {
+  width: 100%;
+}
+
+table#versions td {
+  padding: 8px 8px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 20%;
+}
+
+table#versions td.n {
+  border-right: none;
+  text-align: center;
+}
+
+table#versions tr {
+  vertical-align: top;
+}
+
+table#versions tr.last td {
+  border-bottom: none;
+}
+
+table#versions td p {
+  margin: 0 0 0.5em;
+  padding: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+textarea,
+select
+{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1em;
+  padding: 3px;
+  width: 350px;
+  margin: 10px;
+}
+
+input[type="file"] {
+  width: 100%;
+}
+
+textarea {
+  height: 60px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  margin: 10px 30px;
+}
+
+input[type="submit"].small {
+  padding: 3px;
+  margin: 5px;
+}
+
+fieldset {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  display: block;
+  vertical-align: text-top;
+}
+
+label {
+  display: block;
+  margin: 0 10px;
+}
+
+p label {
+  display: inline;
+  margin: 0;
+}
+
+form p{
+  margin: 10px;
+  padding: 0;
+}
+
+legend {
+  text-align: left;
+}
+
+div.fieldWithErrors {
+  margin: 0;
+  padding: 0;
+}
+
+div.fieldWithErrors input[type="text"],
+div.fieldWithErrors input[type="password"],
+div.fieldWithErrors textarea {
+  background-color: #fee;
+  border: 1px solid #f66;
+}
+
+div.errorExplanation {
+  background-color: #fee;
+  padding: 8px 15px 2px 15px;
+  margin: 0 15px;
+}
+
+.errorExplanation h2 {
+  font-size: 1.3em;
+  text-align: left;
+  margin: 0;
+  font-weight: normal;
+}
+
+.errorExplanation li {
+  text-align: left;
+}
+
+hr {
+  height: 1px;
+  border-width: 0;
+  color: #AAAAAA;
+  background-color: #AAAAAA;
+}
+
+span.menu {
+  margin: 0 11px 0 11px;
+}
+
+a {
+  color: #06A;
+  text-decoration: underline;
+}
+
+a.item:visited {
+  /*color: #2f4e63;*/
+  color: #00869c;
+  /*color: #0045aa;*/
+}
+
+a:hover, a.item:hover {
+  color: #8F7668;
+}
+
+a:active, a.item:active {
+  color: #756156;
+}
+
+a.menu, a.menu_down, a.menu_reader, a.menu_smaller {
+  font-size: 0.9em;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin: 0 4px 0 4px;
+}
+
+a.menu_reader {
+  color: #6e5a4f;
+}
+
+a.menu_smaller {
+  font-size: 0.7em;
+}
+
+a.menu_down{
+  font-variant: normal;
+  font-weight: normal;
+}
+
+.booktitle, .author {
+  font-size: 1em;
+  font-style: italic;
+}
+
+img.pre {
+  float: left;
+  margin: 10px 10px 5px 0;
+  border: none;
+}
+
+p.descr {
+  line-height: 130%;
+}
+
+div.flmsg_notice, div.flmsg_error {
+  font-size: 0.8em;
+  padding: 5px 15px;
+  text-align: center;
+}
+
+div.flmsg_notice {
+  background-color: #DFD;
+}
+
+div.flmsg_error {
+  background-color: #FBB;
+  font-weight: bold;
+}
+
+.tpl_wrapper {
+  /*width: 780px;*/
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.tpl_row {
+ height: 20px;
+}
+
+.t40 {
+  width: 39px;
+}
+
+.t10 {
+  width: 10px;
+}
+
+.t742 {
+  width: 742px;
+}
+
+.t722 {
+  width: 722px;
+}
+
+.tpl_row_tl {
+  background-image: url(../images/_/tl.gif);
+}
+
+.tpl_row_tr {
+  background-image: url(../images/_/tr.gif);
+}
+
+.tpl_row_t {
+  background-image: url(../images/_/t.gif);
+}
+
+.tpl_row_bl {
+  background-image: url(../images/_/bl.gif);
+}
+
+.tpl_row_br {
+  background-image: url(../images/_/br.gif);
+}
+
+.tpl_row_b {
+  background-image: url(../images/_/b.gif);
+}
+
+.tpl_row_l {
+  background-image: url(../images/_/l.gif);
+}
+
+.tpl_row_r {
+  background-image: url(../images/_/r.gif);
+}
+
+form.search {
+  vertical-align: middle;
+}
+
+input.search {
+  color: #aaa;
+  font-weight: bold;
+  width: 360px;
+  font-size: 14px;
+  border: #aaa solid 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px 3px 3px 3px;
+  padding: 4px;
+  margin: 6px 0;
+  background-color: transparent;
+}
+
+input.search:focus {
+  color: #606060;
+  border-color: #606060;
+}
+
+button.search {
+  width: 26px;
+  height: 34px;
+  margin: 0 4px;
+  background: url('/images/_/sb.gif') no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+button.search:hover, button.search:active, button.search:focus {
+    background: url('/images/_/sb2.gif') no-repeat;
+}
+
+table.admin { /*}, table.admin td, table.admin th {*/
+  border:1px solid #ccc;
+  margin: auto;
+}
+
+table.admin td {
+  padding: 5px;
+}
+
+table.admin th {
+  padding: 5px;
+  background-color: #FAFAFA;
+}
+
+img.thumbnail {
+  padding: 2px;
+  margin: 5px;
+  border: solid 1px #999;
+  width: 100px;
+  float: right;
+}
+
+table.list {
+  margin: 5px 15px 10px 15px;
+}
+
+table.list p {
+  margin: 0;
+  padding: 0;
+}
+
+.by {
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+img.thumblist {
+  padding: 1px;
+  margin-right: 15px;
+  border: solid 1px #999;
+  width: 32px;
+  max-height: 100px;
+  vertical-align: middle;
+}
+
+img.thumblisthome {
+  padding: 1px;
+  margin: 3px 10px 0 0;
+  border: solid 1px #999;
+/* Maximum acceptable width without breaking the layout is 228, so 200 is a good value*/
+  max-width: 200px;
+  height: 150px;
+}
+
+div.home {
+  margin-bottom: 35px;
+}
+
+a.thumblist, a.thumblist_no_img {
+  font-size: 1.1em;
+}
+
+a.thumblist_no_img {
+  margin-left: 50px;
+}
+
+p.linklist {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+a.small {
+  margin-left: 5px;
+  font-size: 0.8em;
+  font-variant: small-caps;
+}
+
+div.loading {
+  text-align: center;
+  margin: 10px;
+}
+
+ div.youtube {
+   text-align: center;
+ }
+
+p.quote {
+  font-style: italic;
+  letter-spacing: 0.08em;
+}
+
+p.strike {
+  text-decoration: line-through;
+}
+
+div.paginate {
+  text-align: right;
+}
+
+span.paginate {
+  padding-left: 10px;
+}
+
+code {
+  background: #eee;
+  padding: 2px 6px;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 0.08em;
+}
+
+li {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+img.diagram, table.diagram img {
+  padding: 0px;
+  margin: 20px;
+  border: #222 1px solid;
+}
+
+table.diagram td {
+  width: 50%;
+  text-align: center;
+}
+
+table.diagram {
+  width: 100%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+div.overlay {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  
+  /*background-color: #F60;*/
+  background-color: #806A5D;
+  opacity: 0.95;
+  filter: alpha(opacity = 95);
+  z-index: 10;
+  font-size: 2em;
+  color: #FFF;
+}

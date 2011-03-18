@@ -1,0 +1,15 @@
+<% title 'The genres' %>
+
+<%= h1 'Genres' %>
+
+<% if @genres.empty? %>
+  <p>
+    <i>No genres have been added, so far.</i>
+  </p>
+<% else %>
+  <% for genre in @genres %>
+    <%= mobile_link_to(genre_url(h(genre.name)), h(genre.name), nil, true, 'tag', true, true) %>
+  <% end %>
+<% end %>
+
+<%= will_paginate @genres, :renderer => 'WillPaginate::MobileRenderer' %>

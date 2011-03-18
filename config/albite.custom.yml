@@ -1,0 +1,89 @@
+# AlbiteBOOKS settings
+# ====================
+
+# Site title
+title: Albite BOOKS
+
+# Mobile version: activate using the user agent or the subdomain
+# ==============================================================
+#
+# using the subdomain if true (e.g. http://m.albite.vlexofree.com), or the user-agent header if false
+mobile_by_subdomain: false
+
+# Screen overlay, used mainly to indicate that the site is under construction or under update or such stuff
+# and on the same time disable site functionality (i.e. only viewing would be possible without any
+# interactivity.
+overlay:
+  on: false                   # whether to use overlay mode
+  except: [127.0.0.1]         # a list of ip addresses that don't see the overlay message
+  partial: under_construction # the name of the partial in the overlay folder that would be rendered into the overlay
+
+# Count of books showed at the homepage
+homepage_book_count: 3
+
+# Pagination
+paginate:
+  index:           # general options, i.e. for most pages, the values are larger for they usually don't feature images
+    html:       48 # number of items per page in the standard version
+    mobile:     10 # not used in the mobile version
+
+  search:          # options only for the search pages; with images
+    html:       10 # search_url
+    mobile:     10 # search_authors_url, search_books_url, mobile format
+
+  tags:            # genres and subjects
+    html:       24
+    mobile:     10
+
+  latest:          # latest books; with images
+    html:       16
+    mobile:      8
+
+# App's Secret Token
+# ==================
+#
+# Your secret key for verifying cookie session data integrity.
+# If you change this key, all old sessions will become invalid!
+# Make sure the secret is at least 30 characters and all random,
+# no regular words or you'll be exposed to dictionary attacks.
+secret_token: c34b0e90f2689407f8674502ac2019e62c886b23821c260775665a02db792a8a3ff18c9aab720c75ad139220cc2ae564ac5d84a3fdbac6723a84bd73946c5f4e
+
+# True, if new users can sign up
+# ==============================
+can_add_users: false
+
+# Hide letter-indices, therefore showing all books (useful if there is too little content)
+# ========================================================================================
+hide_author_index: false
+hide_book_index: false
+
+# SMTP mail (gmail settings preset)
+# =================================
+smtp:
+  address: smtp.gmail.com
+  port: 587
+  authentication: plain
+  enable_starttls_auto: true
+  user_name: your_username@gmail.com
+  password: your_password
+
+# Mail from field
+# ===============
+mail_from: asphodelflower@gmail.com
+
+# Recaptcha
+# =========
+recaptcha_public_key: recaptcha_public_key_goes_here
+recaptcha_private_key: recaptcha_private_key_goes_here
+
+# UserVoice Feedback button/form
+# ===============================
+uservoice:
+  key: your_key
+  host: your_key.uservoice.com
+  forum: your_forum_id_number
+
+# DISQUS Options
+# ==============
+disqus_shortname: your_disqus_shortname
+

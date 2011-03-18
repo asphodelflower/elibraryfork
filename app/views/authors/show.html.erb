@@ -1,0 +1,37 @@
+<% title @author.name %>
+
+<% content_for(:head) do %>
+  <%= render :partial => 'misc/freebase_ajax' %>
+<% end %>
+
+<h1>
+  <%= h(@author.name) %>
+  <%= edit_author_links(@author) %>
+</h1>
+<p>
+  <%= image_tag(h(@author.thumbnail_url), :class =>  'thumbnail') unless @author.thumbnail_url.blank? %>
+  <%= ajax_span('freebase_description') %>
+</p>
+<%= ajax_div('freebase_bio') %>
+<%= author_aka(@author) %>
+<div></div>
+
+<h1>Books</h1>
+<%= render :partial => 'books/index' %>
+<%= new_book_link(@author) %>
+
+<%= ajax_div 'freebase_quotes' %>
+<%= render :partial => 'misc/qr_code' %>
+<%= ajax_div 'freebase_links' %>
+
+<h1>Comments</h1>
+<%= render :partial => 'misc/disqus_thread' %>
+<% content_for(:tail) do %>
+  <%= render :partial => 'misc/disqus_tail' %>
+<% end %>
+
+<%= new_author_link %>
+
+<p>
+  <%= link_to 'Back to Authors', authors_url %>
+</p>

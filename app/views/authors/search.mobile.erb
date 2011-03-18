@@ -1,0 +1,8 @@
+<%= h1 "Authors for ‘#{h(@query)}’" %>
+<%= render :partial => 'index' %>
+<%= will_paginate(@authors, :renderer => 'WillPaginate::MobileRenderer') if @authors %>
+
+<% content_for(:back) do %>
+  <%= mobile_link_to(authors_url, 'Search', 'Search for another author', true, 'user') %>
+  <%= mobile_link_to(books_url, 'Search', 'Search for another book', true, 'book') %>
+<% end %>

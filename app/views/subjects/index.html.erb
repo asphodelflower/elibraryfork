@@ -1,0 +1,18 @@
+<% title 'The subjects' %>
+<h1>Subjects</h1>
+
+<% if @subjects.empty? %>
+  <p>
+    <i>No subjects have been added, so far.</i>
+  </p>
+<% else %>
+  <ul>
+    <% for subject in @subjects %>
+      <li>
+        <%= link_to h(subject.name), subject_url(h(subject.name)), :class => 'item' %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= will_paginate @subjects %>

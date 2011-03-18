@@ -1,0 +1,22 @@
+<h1>
+  Downloading ‘<%= h(@translation.book.title) %>’
+  <%= edit_translation_links(@translation) %>
+</h1>
+
+<%= simple_section(@translation.note, 'Note') %>
+<%= simple_section(@translation.date_of_publication, 'Date of publication') %>
+<%= simple_section(Languages::LANGUAGES[@translation.language][0], 'Language') %>
+<%= simple_section(link_to(h(@translation.source_url), @translation.source_url, :target => '_blank'), 'Source') %>
+<%= simple_section(@translation.filesize, 'Size') %>
+<%= simple_section(@translation.md5, 'MD5 hash') %>
+
+<div class="download">
+  <p>
+    <%= link_to "Download ‘#{h(@translation.filename)}’", translation_file_url(@translation),
+                :class => 'menu_reader' %>
+  </p>
+</div>
+
+<p>
+  <%= link_to "Back to #{h(@translation.book.title)}", book_url(@translation.book) %>
+</p>

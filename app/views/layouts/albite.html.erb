@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      <%= yield(:title) %>
+      <%= APP_CONFIG['title'] %>
+    </title>
+
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+    <meta name="description" content="Read free e-books on Java Mobile phones."/>
+    <meta name="keywords" content="free ebooks, free books, book reader, albite reader, albite books, java mobile"/>
+    <meta name="language" content="en_GB"/>
+    <meta name="classification" content="public"/>
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <%= stylesheet_link_tag 'main' %>
+
+    <script type="text/javascript">
+      var images_url = "/images/";
+    </script>
+    <%= javascript_include_tag 'application.js' %>
+
+    <%= yield :head %>
+  </head>
+  <body onload="<%= yield :on_load_pre %>doc_load();<%= yield :on_load_post %><%= yield :focus_on_load %>">
+    <table class="tpl_wrapper">
+      <!--<colgroup width="40"></colgroup>-->
+      <!--<colgroup width="10"></colgroup>-->
+      <!--<colgroup width="722"></colgroup>-->
+      <!--<colgroup width="10"></colgroup>-->
+      <!--<colgroup width="40"></colgroup>-->
+
+      <tr class="tpl_row">
+        <td class="tpl_row_tl t40"></td>
+        <th class="tpl_row_t t742" colspan="3"></th>
+        <td class="tpl_row_tr t40"></td>
+      </tr>
+
+      <tr style="height: 70px;" valign="bottom">
+        <td class="tpl_row_l t40"></td>
+        <td class="t10"></td>
+        <td class="t722">
+          <table style="width: 100%;" cellspacing="0" cellpadding="0">
+            <tr valign="bottom">
+              <td align="left">
+                  <%= link_to image_tag('_/ebook64.png', :class => 'logo',
+                                                     :alt => 'Albite BOOKS Logo'), root_url  %>
+              </td>
+              <td align="right">
+              <%= render :partial => 'layouts/search' %>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class="t10"></td>
+        <td class="tpl_row_r t40"></td>
+      </tr>
+
+      <tr valign="top" style="height: 10px;">
+        <td class="tpl_row_l t40"></td>
+        <td class="t10"></td>
+        <td class="t722">
+          <div style="height: 10px;"></div>
+          <table style="width: 100%;">
+            <tr>
+              <td align="left">
+                <span class="menu"><%= render :partial => 'layouts/menu_top' %></span>
+              </td>
+              <td align="right">
+                <span class="menu"><%= render :partial => 'layouts/menu_login' %></span>
+              </td>
+            </tr>
+          </table>
+          <br/>
+        </td>
+        <td class="t10"></td>
+        <td class="tpl_row_r t40"></td>
+      </tr>
+
+      <tr valign="top">
+        <td class="tpl_row_l t40"></td>
+        <td class="t10"></td>
+        <td class="t722" align="left">
+            <%= content_tag :div, flash[:notice], :class => 'flmsg_notice' if flash[:notice] %>
+            <%= content_tag :div, flash[:error], :class => 'flmsg_error' if flash[:error] %>
+          <%= yield %>
+        </td>
+        <td class="t10"></td>
+        <td class="tpl_row_r t40"></td>
+      </tr>
+
+      <tr style="height: 10px">
+        <td class="tpl_row_l t40"></td>
+        <td class="t10"></td>
+        <td class="t722" align="center">
+          <hr width="100%" />
+          <span class="menu"><%= render :partial => 'layouts/menu_bottom' %></span>
+          <hr width="100%" />
+        </td>
+        <td class="t10"></td>
+        <td class="tpl_row_r t40"></td>
+      </tr>
+
+
+    </table>
+  <%= yield :tail %>
+  <%= render :partial => 'layouts/uservoice' if not overlay? %>
+  <%= render :partial => 'layouts/overlay' if overlay? %>
+  </body>
+</html>
+

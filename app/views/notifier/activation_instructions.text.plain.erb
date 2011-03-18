@@ -1,0 +1,9 @@
+<%= APP_CONFIG['title'] %>
+------------------------------------------------------
+
+  Hello <%= @account_info[:name] %>,
+  You have just created an account at <%= APP_CONFIG['title'] %>! Click the url below to activate it.
+  
+    <%= @account_info[:url] %>
+  
+  If the above URL does not work try copying and pasting it into your browser.

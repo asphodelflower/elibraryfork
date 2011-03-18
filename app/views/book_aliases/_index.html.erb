@@ -1,0 +1,14 @@
+<% for aliaz in @aliases %>
+  <% if aliaz != @book.alias_title %>
+    <p>
+      <%= link_to h(aliaz.title), edit_book_alias_url(aliaz) %>
+      <%= edit_book_alias_links(aliaz) %>
+    </p>
+  <% end %>
+<% end %>
+
+<% if @aliases.size < 2 %>
+  <p>
+    <i>No aliases have been added so far.</i>
+  </p>
+<% end %>

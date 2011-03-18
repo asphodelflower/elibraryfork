@@ -1,0 +1,14 @@
+<% for aliaz in @aliases %>
+  <% if aliaz != @author.alias_name %>
+    <p>
+      <%= link_to h(aliaz.name_reversed), edit_author_alias_path(aliaz) %>
+      <%= edit_author_alias_links(aliaz) %>
+    </p>
+  <% end %>
+<% end %>
+
+<% if @aliases.size < 2 %>
+  <p>
+    <i>No aliases have been added so far.</i>
+  </p>
+<% end %>

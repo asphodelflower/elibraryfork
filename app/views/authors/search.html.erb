@@ -1,0 +1,5 @@
+<h1>
+  Authors found for ‘<%= h(@query) %>’
+</h1>
+<%= render :partial => 'index' %>
+<%= will_paginate @authors if @authors %>

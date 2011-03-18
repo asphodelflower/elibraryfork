@@ -1,0 +1,282 @@
+html, body {
+  width: 100%;
+  /*width: 240px;*/
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+/*background-color: #f8f8f8;*/
+  background: url('/images/mobile/bg.png') repeat fixed;
+  border-style: none;
+
+  color: #000;
+  
+  text-align: center;
+  font-family: sans-serif;
+  font-size: medium;
+}
+
+img {
+  border-style: none;
+}
+
+p {
+  /*padding: 5%;*/
+  padding: 10px;
+  margin: 0;
+  line-height: 130%;
+}
+
+h1 {
+  background: #d8d8d8 url("/images/mobile/header.png") repeat-x top;
+  /*padding: 6%;*/
+  padding: 10px;
+  margin: 0;
+  color: #303030;
+  font-weight: normal;
+}
+
+h2 {
+  background: #7c7e7c url("/images/mobile/label.png") repeat-x top;
+  /*padding: 3%;*/
+  padding: 10px;
+  margin: 0;
+  color: #f5f5f5;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h1,  .large {
+  font-size: large;
+}
+
+h2, .medium {
+  font-size: medium;
+}
+
+.subtitle, .small {
+  font-size: small;
+}
+
+a {
+  display: block;
+  margin: 0;
+  /*color: #444;*/
+  color: #000;
+  padding: 10px;
+  text-decoration: none;
+  line-height: 100%;
+}
+
+a.item:visited {
+  color: #777;
+}
+
+a, p, h1, div.thumbnail {
+  border-bottom: #adaaad solid 1px;
+}
+
+p, .text, div.thumbnail, td.no_page {
+  background: #f5f3f3 url("/images/mobile/text.png") repeat-x top
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.arrow {
+  background: url('/images/mobile/next.png') no-repeat right center;
+  padding-right: 44px;
+}
+
+a, p, div.main, h1, h2, .left {
+  text-align: left;
+}
+
+.hover:hover, .hover:active, .hover:focus {
+  background: #ff9200 url("/images/mobile/pressed.png") repeat-x top;
+}
+
+div.thumbnail {
+  width: 100%;
+  padding: 15% 0;
+  text-align: center;
+}
+
+img.thumbnail {
+  border: 1px #adaaad solid;
+  width: 70%;
+}
+
+img.small {
+  width: 24px;
+  max-height: 50px;
+  padding: 5px 5px 0 0;
+}
+
+tr {
+  vertical-align: top;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table.pages {
+  width: 100%;
+}
+
+td.page, td.no_page {
+  width: 20%;
+}
+
+td.no_page {
+  border-bottom:  #adaaad solid 1px;
+}
+
+td {
+  padding: 0;
+}
+
+p.curr_page {
+  padding: 10px;
+  line-height: 100%;
+  text-align: center;
+}
+
+tr.link {
+  vertical-align: middle;
+}
+
+table.search {
+  width: 100%;
+  padding: 5%;
+  background-color: #434343;
+}
+
+td.search {
+  width: 43px;
+}
+
+td.separator {
+  width: 10px;
+}
+
+tr.search {
+  vertical-align: middle;
+}
+
+input.box {
+  width: 100%;
+  border: none;
+  background: url('/images/mobile/search.png') repeat-x;
+  height: 43px;
+  padding: 0 6px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+button.go {
+  width: 43px;
+  height: 43px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  
+  background: url('/images/mobile/search-button.png') no-repeat;
+}
+
+button.go:hover, button.go:active, button.go:focus {
+  background: url('/images/mobile/search-button-pressed.png') no-repeat;
+  cursor: pointer;
+}
+
+div.box_left, div.box_right {
+  width: 6px;
+  height: 43px;
+
+  position: absolute;
+  z-index: 3;
+}
+
+div.box_left{
+  top: 0px;
+  left: 0px;
+  background: url('/images/mobile/search-left.png') no-repeat;
+}
+
+div.box_right {
+  top: 0px;
+  right: -10px;
+  background: url('/images/mobile/search-right.png') no-repeat;
+}
+
+div.shadow_container, div.box, .relative {
+  position: relative;
+}
+
+div.shadow {
+  width: 100%;
+  height: 3px;
+  background: url('/images/mobile/shadow.png') repeat-x;
+  position: absolute;
+  z-index: 4;
+}
+
+/*
+ * ICONS
+ */
+a.icon {
+  padding-left: 44px;
+}
+
+div.icon_back,
+div.icon_book,
+div.icon_clock,
+div.icon_download,
+div.icon_home,
+div.icon_tag,
+div.icon_user,
+div.icon_zoom
+
+{
+  background: none no-repeat 10px center;
+}
+
+div.icon_back {
+  background-image: url('/images/mobile/back.png');
+}
+
+div.icon_book {
+  background-image: url('/images/mobile/book.png');
+}
+
+div.icon_clock {
+  background-image: url('/images/mobile/clock.png');
+}
+
+div.icon_download {
+  background-image: url('/images/mobile/download.png');
+}
+
+div.icon_home{
+  background-image: url('/images/mobile/home.png');
+}
+
+div.icon_tag {
+  background-image: url('/images/mobile/tag.png');
+}
+
+div.icon_user {
+  background-image: url('/images/mobile/user.png');
+}
+
+div.icon_zoom {
+  background-image: url('/images/mobile/zoom.png');
+}
